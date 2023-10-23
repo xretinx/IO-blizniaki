@@ -1,0 +1,117 @@
+/* Reset default margins and padding */
+body,
+h1,
+h2,
+label,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  padding: 20px;
+}
+
+form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0;
+}
+
+select,
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Style the traits checkboxes */
+#trait-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  width: 47%;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #333;
+}
+
+#result {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+/* Style the file input button */
+input[type="file"] {
+  display: none; /* Hide the default input field */
+}
+/* Style the custom button to be narrower */
+.custom-file-input {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 10px; /* Adjust the width as needed */
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  width: auto; /* Set width to auto to allow text to wrap */
+  text-align: center;
+}
+
+.custom-file-input:hover {
+  background-color: #45a049;
+}
+/* Center the image horizontally */
+#uploaded-image {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dog Breed Finder</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Dog Breed Finder</h1>
+    <form id="dog-form" method="post" enctype="multipart/form-data">
+      <input
+        type="file"
+        id="file-input"
+        name="image"
+        accept="image/*"
+        style="display: none"
+      />
+
+      <!-- Create a custom button to trigger the file input and add a span for the "No file chosen" text -->
+      <label for="file-input" class="custom-file-input"> Choose Image </label>
+
+      <!-- Add a span to display the selected file name -->
+      <span id="file-name-label">No file chosen</span>
+      <!-- Add an image element with an id for displaying the uploaded image -->
+      <img
+        id="uploaded-image"
+        src=""
+        alt="Uploaded Image"
+        style="max-width: 100%; max-height: 200px; display: none"
+      />
+      <!-- List of clickable traits -->
+      <label for="traits">Select Traits:</label>
+      <div id="trait-checkboxes">
+        {% for trait in traits %}
+        <label>
+          <input type="checkbox" name="selected_traits" value="{{ trait }}" />
+          {{ trait }} </label
+        ><br />
+        {% endfor %}
+      </div>
+
+      <button type="submit">Find Dog Breed</button>
+    </form>
+    <div id="result"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

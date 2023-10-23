@@ -1,0 +1,22 @@
+traits = [
+    "Lojalny",
+    "Przyjacielski",
+    "Oddany",
+    "Cierpliwy",
+    "Uważny",
+    "Odporny",
+    "Radosny",
+    "Troskliwy",
+    "Energiczny",
+    "Posłuszny",
+    "Zaufany",
+    "Spokojny",
+    "Życzliwy",
+    "Wierny",
+    "Przyjemny",
+    "Zrównoważony",
+    "Żwawy",
+    "Optymistyczny",
+    "Dzielny",
+    "Delikatny"
+]
