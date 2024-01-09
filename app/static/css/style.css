@@ -14,17 +14,17 @@ body {
   margin: 0;
     background: linear-gradient(to left top,  #67c8c6 , lightblue,  #4aa7a5 );
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
     font-family: 'Doggie', Courier, monospace;
     color: darkcyan;
 }
 
 .heading{
   margin: 5px;
-  font-size: 65px;
+  font-size: 50px;
   color:  #6043e1 ;
   text-align: center;
   border-left-width: 50px;
@@ -41,20 +41,27 @@ form {
     margin: 0;
     background: linear-gradient(to left top,  #67c8c6 , lightblue,  #4aa7a5 );
     display: flex;
-    flex-direction: row;
-    height: 60vh;
-    flex-wrap:wrap;
-    justify-content: center;
+    /* flex-direction: row; */
+    height: 66vh;
+    /* flex-wrap:wrap; */
+    /* justify-content: center; */
     align-items: center;
     font-family: 'Doggie', Courier, monospace;
     color: fff;
 }
 
-.form-group {
-  flex: 1; /* Make each form group take equal width */
+.form-group-thinner {
+  flex: 0.9; /* Make each form group take equal width */
   margin: 5px; /* Add some spacing between form groups */
   align-items: center;
+  display:inline-block;
+}
 
+.form-group-wider {
+  flex: 1.3; /* Make each form group take equal width */
+  margin: 5px; /* Add some spacing between form groups */
+  align-items: center;
+  display:inline-block;
 }
 
 label {
@@ -102,6 +109,16 @@ label {
   width: 47%;
   margin-bottom: 10px;
   color: #333;
+  font-size: 20px;
+}
+
+.nice-label {
+  margin: 5px;
+  font-size: 40px;
+  color:  #333;
+  text-align: center;
+  border-left-width: 50px;
+  margin-left: 190px;
 }
 
 input[type="checkbox"] {
@@ -122,22 +139,24 @@ input[type="file"] {
   display: none; /* Hide the default input field */
 }
 /* Style the custom button to be narrower */
-.custom-file-input {
+.custom-button {
   background-color: #6043e1;
   font-family: 'Doggie', Courier, monospace;
   font-size: 20px;
   color: #fff;
   border: none;
-  padding: 10px 10px; /* Adjust the width as needed */
+  padding: 10px 20px; /* Adjust the width as needed */
   border-radius: 5px;
   cursor: pointer;
   display: inline-block;
   width: auto; /* Set width to auto to allow text to wrap */
   text-align: center;
   align-items: center;
+  margin-left: 140px;
+  font-weight: bold;
 }
 
-.custom-file-input:hover {
+.custom-button:hover {
   background-color:    #fab224  ;
   transition: 0.5s;
 }
