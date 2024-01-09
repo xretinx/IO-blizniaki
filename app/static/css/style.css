@@ -15,6 +15,7 @@ body {
     background: linear-gradient(to left top,  #67c8c6 , lightblue,  #4aa7a5 );
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Doggie', Courier, monospace;
@@ -33,24 +34,33 @@ h1 {
   text-align: center;
   font-size: 2rem;
   color: #333;
-  padding: 20px;
+  padding: 15px;
 }
 
 form {
     margin: 0;
     background: linear-gradient(to left top,  #67c8c6 , lightblue,  #4aa7a5 );
-    min-height: 100vh;
     display: flex;
+    flex-direction: row;
+    height: 60vh;
+    flex-wrap:wrap;
     justify-content: center;
     align-items: center;
     font-family: 'Doggie', Courier, monospace;
-    color: darkcyan;
+    color: fff;
+}
+
+.form-group {
+  flex: 1; /* Make each form group take equal width */
+  margin: 5px; /* Add some spacing between form groups */
+  align-items: center;
+
 }
 
 label {
   font-weight: bold;
-  display: block;
-  margin: 10px 0;
+  display: flex;
+  
 }
 
 select,
@@ -63,7 +73,9 @@ input[type="file"] {
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #6043e1;
+  font-family: 'Doggie', Courier, monospace;
+  font-size: 20px;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -72,7 +84,8 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color:    #fab224  ;
+  transition: 0.5s;
 }
 
 /* Style the traits checkboxes */
@@ -80,6 +93,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 10px 5px
 }
 
 label {
@@ -87,6 +101,7 @@ label {
   align-items: center;
   width: 47%;
   margin-bottom: 10px;
+  color: #333;
 }
 
 input[type="checkbox"] {
@@ -108,7 +123,9 @@ input[type="file"] {
 }
 /* Style the custom button to be narrower */
 .custom-file-input {
-  background-color: #4caf50;
+  background-color: #6043e1;
+  font-family: 'Doggie', Courier, monospace;
+  font-size: 20px;
   color: #fff;
   border: none;
   padding: 10px 10px; /* Adjust the width as needed */
@@ -117,10 +134,12 @@ input[type="file"] {
   display: inline-block;
   width: auto; /* Set width to auto to allow text to wrap */
   text-align: center;
+  align-items: center;
 }
 
 .custom-file-input:hover {
-  background-color: #45a049;
+  background-color:    #fab224  ;
+  transition: 0.5s;
 }
 /* Center the image horizontally */
 #uploaded-image {
