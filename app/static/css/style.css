@@ -1,0 +1,169 @@
+/* Reset default margins and padding */
+body,
+h1,
+h2,
+label,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+    background: linear-gradient(to left top,  #67c8c6 , lightblue,  #4aa7a5 );
+    min-height: 100vh;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    font-family: 'Doggie', Courier, monospace;
+    color: darkcyan;
+}
+
+.heading{
+  margin: 5px;
+  font-size: 50px;
+  color:  #6043e1 ;
+  text-align: center;
+  border-left-width: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  padding: 15px;
+}
+
+form {
+    margin: 0;
+    background: linear-gradient(to left top,  #67c8c6 , lightblue,  #4aa7a5 );
+    display: flex;
+    /* flex-direction: row; */
+    height: 66vh;
+    /* flex-wrap:wrap; */
+    /* justify-content: center; */
+    align-items: center;
+    font-family: 'Doggie', Courier, monospace;
+    color: fff;
+}
+
+.form-group-thinner {
+  flex: 0.9; /* Make each form group take equal width */
+  margin: 5px; /* Add some spacing between form groups */
+  align-items: center;
+  display:inline-block;
+}
+
+.form-group-wider {
+  flex: 1.3; /* Make each form group take equal width */
+  margin: 5px; /* Add some spacing between form groups */
+  align-items: center;
+  display:inline-block;
+}
+
+label {
+  font-weight: bold;
+  display: flex;
+  
+}
+
+select,
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #6043e1;
+  font-family: 'Doggie', Courier, monospace;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:    #fab224  ;
+  transition: 0.5s;
+}
+
+/* Style the traits checkboxes */
+#trait-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 5px
+}
+
+label {
+  display: flex;
+  align-items: center;
+  width: 47%;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 20px;
+}
+
+.nice-label {
+  margin: 5px;
+  font-size: 40px;
+  color:  #333;
+  text-align: center;
+  border-left-width: 50px;
+  margin-left: 190px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #333;
+}
+
+#result {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+/* Style the file input button */
+input[type="file"] {
+  display: none; /* Hide the default input field */
+}
+/* Style the custom button to be narrower */
+.custom-button {
+  background-color: #6043e1;
+  font-family: 'Doggie', Courier, monospace;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px; /* Adjust the width as needed */
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  width: auto; /* Set width to auto to allow text to wrap */
+  text-align: center;
+  align-items: center;
+  margin-left: 140px;
+  font-weight: bold;
+}
+
+.custom-button:hover {
+  background-color:    #fab224  ;
+  transition: 0.5s;
+}
+/* Center the image horizontally */
+#uploaded-image {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}

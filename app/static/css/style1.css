@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    background: linear-gradient(to left top,  #67c8c6 , lightblue,  #4aa7a5 );
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Doggie', Courier, monospace;
+    color: darkcyan;
+}
+
+.container{
+    background: rgba(255,255,255,0.3);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.3);
+    border-radius: 10px;
+    width: 75%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.heading{
+    margin: 5px;
+    font-size: 65px;
+    color:  #6043e1 ;
+    text-align: center;
+    border-left-width: 50px;
+}
+
+.sections-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+.content{
+    padding: 10px;
+}
+
+.section {
+    flex: 1;
+    padding: 10px;
+}
+
+#drop-area{
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* okienko wrzucania */
+#img-view{
+    width: 400px;
+    height: 270px;
+    border-radius: 70px;
+    border: 2px dashed #bbb5ff;
+    background: #f7f8ff;
+    margin-left: auto;
+    display: block;
+}
+
+/* ikonka chmurki */
+#img-view img{
+    width: 150px;
+    margin-top: 25px;
+}
+
+/* mały szary tekst */
+#img-view span{
+    display: block;
+    font-size: 20px;
+    color: #777;
+    margin-top: 20px;
+}
+
+#img-upload{
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+#slider{
+    /* appearance: none; */
+    width: 50%;
+    height: 7px;
+    outline: none;
+    border-radius: 3px;
+    color:#6341fb;
+}
+
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+
+#selector{
+    height: 30px;
+    width: 40px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.SelectBtn{
+    height: 30px;
+    width: 40px;
+    background-image: url(images\bone.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+}
+
+#traits-head{
+    margin: 5px;
+    font-size: 37px;
+    color: #6043e1;
+}
+
+p{
+    margin: 5px;
+    font-size: 20px;
+    color: #6043e1;
+}
+
+.button {
+    position: bottom;
+    width: 200px;
+    height: 80px;
+    margin-left: inherit;
+    top:50%;
+    color: white;
+    font-family: Doggie;
+    font-size: 50px;
+    background-color: #6341fb;
+    border:none;
+    border-radius:10px;
+}
+
+.button:hover {
+    background-color:    #fab224  ;
+    transition: 0.5s;
+}
+
+.button:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px  #f9d286 ;
+    transition: 0.7s;
+}
+
+.button:active {
+    background-color: #f7c45f;
+}
+
+
+/* colors
+#f7c45f - mandarynkowy
+#b4aaf2 - lila
+#392a95 - granat
+#6341fb - jak ikonka
+#6043e1 - fiolet tekstu
+*/
