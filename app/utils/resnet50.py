@@ -1,9 +1,9 @@
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 import numpy as np
-from utils.dog_breeds import class_names
+from .dog_breeds import class_names
 
-model = tf.keras.models.load_model('models/resnet50-human_dog_model')
+model = tf.keras.models.load_model('app/models/resnet50-human_dog_model')
 
 def preprocess_image(path):
     img = image.load_img(path, target_size=(224,224,))
