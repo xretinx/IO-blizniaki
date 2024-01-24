@@ -12,20 +12,20 @@ button {
 
 body {
   margin: 0;
-    background: linear-gradient(to left top,  #67c8c6 , lightblue,  #4aa7a5 );
-    min-height: 100vh;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    font-family: 'Doggie', Courier, monospace;
-    color: darkcyan;
+  background: linear-gradient(to left top, #67c8c6, lightblue, #4aa7a5);
+  min-height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  font-family: "Doggie", Courier, monospace;
+  color: darkcyan;
 }
 
-.heading{
+.heading {
   margin: 5px;
   font-size: 50px;
-  color:  #6043e1 ;
+  color: #6043e1;
   text-align: center;
   border-left-width: 50px;
 }
@@ -38,36 +38,35 @@ h1 {
 }
 
 form {
-    margin: 0;
-    background: linear-gradient(to left top,  #67c8c6 , lightblue,  #4aa7a5 );
-    display: flex;
-    /* flex-direction: row; */
-    height: 66vh;
-    /* flex-wrap:wrap; */
-    /* justify-content: center; */
-    align-items: center;
-    font-family: 'Doggie', Courier, monospace;
-    color: fff;
+  margin: 0;
+  background: linear-gradient(to left top, #67c8c6, lightblue, #4aa7a5);
+  display: flex;
+  /* flex-direction: row; */
+  height: 66vh;
+  /* flex-wrap:wrap; */
+  /* justify-content: center; */
+  align-items: center;
+  font-family: "Doggie", Courier, monospace;
+  color: fff;
 }
 
 .form-group-thinner {
   flex: 0.9; /* Make each form group take equal width */
   margin: 5px; /* Add some spacing between form groups */
   align-items: center;
-  display:inline-block;
+  display: inline-block;
 }
 
 .form-group-wider {
   flex: 1.3; /* Make each form group take equal width */
   margin: 5px; /* Add some spacing between form groups */
   align-items: center;
-  display:inline-block;
+  display: inline-block;
 }
 
 label {
   font-weight: bold;
   display: flex;
-  
 }
 
 select,
@@ -81,7 +80,7 @@ input[type="file"] {
 
 button {
   background-color: #6043e1;
-  font-family: 'Doggie', Courier, monospace;
+  font-family: "Doggie", Courier, monospace;
   font-size: 20px;
   color: #fff;
   border: none;
@@ -91,7 +90,7 @@ button {
 }
 
 button:hover {
-  background-color:    #fab224  ;
+  background-color: #fab224;
   transition: 0.5s;
 }
 
@@ -100,7 +99,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 10px 5px
+  margin: 10px 5px;
 }
 
 label {
@@ -115,7 +114,7 @@ label {
 .nice-label {
   margin: 5px;
   font-size: 40px;
-  color:  #333;
+  color: #333;
   text-align: center;
   border-left-width: 50px;
   margin-left: 190px;
@@ -141,7 +140,7 @@ input[type="file"] {
 /* Style the custom button to be narrower */
 .custom-button {
   background-color: #6043e1;
-  font-family: 'Doggie', Courier, monospace;
+  font-family: "Doggie", Courier, monospace;
   font-size: 20px;
   color: #fff;
   border: none;
@@ -157,7 +156,7 @@ input[type="file"] {
 }
 
 .custom-button:hover {
-  background-color:    #fab224  ;
+  background-color: #fab224;
   transition: 0.5s;
 }
 /* Center the image horizontally */
@@ -166,4 +165,51 @@ input[type="file"] {
   max-height: 200px;
   display: block;
   margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Dodaj ten fragment do swojego pliku stylów CSS */
+.loader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  scale: 1.5;
+  margin: auto;
+}
+
+.loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+
+.loader span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  color: #d5dad9;
+
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  80%,
+  100% {
+    transform: scale(0);
+  }
+}
+
+#uploaded-image {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 1s; /* Dodaj transition do płynnego animowania zmiany wielkości */
 }

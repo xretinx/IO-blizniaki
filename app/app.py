@@ -26,6 +26,7 @@ def find_dog_breed():
 
     # Get the list of selected traits
     sample = {}
+    print(request.form)
     for trait, value in zip(traits, request.form.getlist('slide_traits')):
         sample[trait] = float(value)
     print(sample)
