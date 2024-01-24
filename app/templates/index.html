@@ -7,23 +7,26 @@
       type="text/css"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
+    <script src="https://kit.fontawesome.com/7f7795eb24.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1 class="heading">Your Doggy Twin<img src="../static/images/dog2.png" alt="Icon" style="margin: 0; width: 120px;"></h1>
+    <h1 class="heading">
+      Your Doggy Twin<img
+        src="../static/images/dog2.png"
+        alt="Icon"
+        style="margin: 0; width: 120px"
+      />
+    </h1>
     <form id="dog-form" method="post" enctype="multipart/form-data">
-      
       <input
         type="file"
         id="file-input"
         name="image"
         accept="image/*"
         style="display: none"
-      /> 
+      />
 
       <div class="form-group-thinner">
-            
-
-        
         <!-- Add an image element with an id for displaying the uploaded image -->
         <img
           id="uploaded-image"
@@ -32,34 +35,40 @@
           style="max-width: 100%; max-height: 200px; display: none"
         />
         <!-- Create a custom button to trigger the file input and add a span for the "No file chosen" text -->
-        <label for="file-input" class="custom-button">Choose Image<br></label>
+        <label for="file-input" class="custom-button">Choose Image<br /></label>
         <!-- Add a span to display the selected file name -->
-        <span id="file-name-label" style="margin-left: 20px;">No file chosen</span>
+        <span id="file-name-label" style="margin-left: 20px"
+          >No file chosen</span
+        >
       </div>
-      
+
       <div class="form-group-wider">
-          <!-- List of clickable traits -->
-      <!-- <label for="traits" class="nice-label">Select traits<br></label> -->
-      <div id="trait-checkboxes">
-        {% for trait in traits %}
-        <label style="margin-right: 10px;">
-          
-          <input type="range" min="1" max="5" value="{{ trait }}" style="margin-left: 20px; margin-right: 20px;"/>
-          {{ trait }} 
-          </label
-        ><br />
         
-        {% endfor %}
-      </div>
+        <!-- List of clickable traits -->
+        <!-- <label for="traits" class="nice-label">Select traits<br></label> -->
+        <div id="trait-checkboxes">
+          {% for trait in traits %}
+          <label style="margin-right: 10px">
+            <input
+              type="range"
+              min="1"
+              max="5"
+              value="{{ trait }}"
+              style="margin-left: 20px; margin-right: 20px"
+              name="slide_traits"
+            />
+            {{ trait }} </label
+          ><br />
+
+          {% endfor %}
+        </div>
       </div>
       
       <div class="form-group-thinner">
         <button type="submit" class="custom-button">Find Dog Breed</button>
       </div>
-      
-      
     </form>
-    
+
     <div id="result"></div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
