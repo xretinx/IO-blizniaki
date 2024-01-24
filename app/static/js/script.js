@@ -73,26 +73,25 @@ document.addEventListener("DOMContentLoaded", function () {
       //formGroupWider.appendChild(uploadedImage);
 
       // Przywróć widoczność diva o klasie "form-group-wider"
+      formGroupWider.style.transition = "opacity 1s, transform 1s";
       formGroupWider.style.opacity = 1;
+      formGroupWider.style.transform = "scale(1)";
 
       setTimeout(function () {
-        const formGroupWider = document.querySelector(".form-group-wider");
-        formGroupWider.style.transition = "opacity 1s";
+        formGroupWider.style.transition = "opacity 1s, transform 1s";
         formGroupWider.style.opacity = 0;
+        formGroupWider.style.transform = "scale(0.8)";
         formGroupWider.innerHTML = "";
       }, 3800);
 
       setTimeout(function () {
-        formGroupWider.style.transition = "opacity 1s";
+        formGroupWider.style.transition = "opacity 1s, transform 1s";
         formGroupWider.style.opacity = 1;
-        const uploadedImage = document.getElementById("uploaded-image");
-        formGroupWider.appendChild(uploadedImage);
-        uploadedImage.style.transform = "scale(1.2)";
+        formGroupWider.style.transform = "scale(1.2)";
       }, 4100);
 
       setTimeout(function () {
-        const formGroupWider = document.querySelector(".form-group-wider");
-        formGroupWider.style.transition = "opacity 1s";
+        formGroupWider.style.transition = "opacity 1s, transform 1s";
         formGroupWider.style.opacity = 0;
         formGroupWider.innerHTML = "";
       }, 4700);
@@ -100,8 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         resultDiv.innerHTML = `<i class="heading"> Most similar dog breed: ${breed}</i>`;
 
-        formGroupWider.style.transition = "opacity 1s";
+        formGroupWider.style.transition = "opacity 1s, transform 1s";
         formGroupWider.style.opacity = 1;
+        formGroupWider.style.transform = "scale(1)";
 
         formGroupWider.innerHTML =
           '<img src="../static/images/Baza_reprezentacja/' +
