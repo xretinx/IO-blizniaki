@@ -1,3 +1,4 @@
+let breed;
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("dog-form");
   const resultDiv = document.getElementById("result");
@@ -21,9 +22,29 @@ document.addEventListener("DOMContentLoaded", function () {
       button.style.opacity = 0;
     });
 
+    setTimeout(function () {
+      const formData = new FormData(form);
+
+      fetch("/find_dog_breed", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+         breed = data.dog_breed;
+         console.log(breed);
+        formGroupWider.style.transition = "opacity 1s";
+        formGroupWider.style.opacity = 1;
+        
+       ;
+
+       
 
 
-   
+        });
+    }, 0);
+
+   console.log(breed);
 
     // Poczekaj 1 sekundę przed usunięciem zawartości diva
     setTimeout(function () {
@@ -91,26 +112,19 @@ document.addEventListener("DOMContentLoaded", function () {
     },4700)
 
     setTimeout(function () {
-      const formData = new FormData(form);
-
-      fetch("/find_dog_breed", {
-        method: "POST",
-        body: formData,
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          resultDiv.innerHTML = `<i class="heading"> Most similar dog breed: ${data.dog_breed}</i>`;
+      
+          resultDiv.innerHTML = `<i class="heading"> Most similar dog breed: ${breed}</i>`;
 
         formGroupWider.style.transition = "opacity 1s";
         formGroupWider.style.opacity = 1;
         
-        formGroupWider.innerHTML = '<img src="../static/images/Baza_reprezentacja/' + data.dog_breed + '.jpg" alt="Your Image">';
+        formGroupWider.innerHTML = '<img src="../static/images/Baza_reprezentacja/' + breed + '.jpg" alt="Your Image">';
 
        
 
 
-        });
-    }, 5000);
+        }, 5000);
+   
 
  
 
