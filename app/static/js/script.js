@@ -1,7 +1,6 @@
 let breed;
 document.addEventListener("DOMContentLoaded", function () {
-
-  const buttoncalc = document.getElementById('calc');
+  const buttoncalc = document.getElementById("calc");
   buttoncalc.disabled = true;
 
   const form = document.getElementById("dog-form");
@@ -86,19 +85,19 @@ document.addEventListener("DOMContentLoaded", function () {
         formGroupWider.style.opacity = 0;
         formGroupWider.style.transform = "scale(0.8)";
         formGroupWider.innerHTML = "";
-      }, 3800);
+      }, 5000);
 
       setTimeout(function () {
         formGroupWider.style.transition = "opacity 1s, transform 1s";
         formGroupWider.style.opacity = 1;
         formGroupWider.style.transform = "scale(1.2)";
-      }, 4100);
+      }, 5300);
 
       setTimeout(function () {
         formGroupWider.style.transition = "opacity 1s, transform 1s";
         formGroupWider.style.opacity = 0;
         formGroupWider.innerHTML = "";
-      }, 4700);
+      }, 5600);
 
       setTimeout(function () {
         resultDiv.innerHTML = `<i class="heading"> Most similar dog breed: ${breed}</i>`;
@@ -108,16 +107,22 @@ document.addEventListener("DOMContentLoaded", function () {
         formGroupWider.style.transform = "scale(1)";
 
         formGroupWider.innerHTML =
-          '<img src="../static/images/Baza_reprezentacja/' +
+          '<img class="im" src="../static/images/Baza_reprezentacja/' +
           breed +
           '.jpg" alt="Your Image">';
-      }, 5000);
+        const reloadButton = document.createElement("button");
+        reloadButton.textContent = "Let's try again!";
+        reloadButton.classList.add("cuustom-button");
+        reloadButton.addEventListener("click", function () {
+          location.reload();
+        });
+
+        formGroupWider.appendChild(reloadButton);
+      }, 5900);
 
       // Poczekaj 1 sekundę przed wysłaniem formularza
     }, 300);
   });
-
-
 
   const fileInput = document.getElementById("file-input");
   const fileNameLabel = document.getElementById("file-name-label");

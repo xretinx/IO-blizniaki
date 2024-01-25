@@ -154,6 +154,12 @@ input[type="file"] {
   margin-left: 140px;
   font-weight: bold;
 }
+.im {
+  max-height: 450px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 1s;
+}
 
 .custom-button:hover {
   background-color: #fab224;
@@ -161,7 +167,7 @@ input[type="file"] {
 }
 
 .custom-button:disabled,
-custom-button[disabled]{
+custom-button[disabled] {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
