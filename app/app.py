@@ -57,7 +57,7 @@ def find_dog_breed():
     print(softsets_result, resnet50_result)
     combined_result = {}
     for breed in softsets_result.keys():
-        combined_result[breed] = softsets_result[breed] + 2000*resnet50_result[breed]
+        combined_result[breed] = (softsets_result[breed] + 1.5*resnet50_result[breed])/2.5
 
     max_key = max(combined_result, key=lambda k: combined_result[k])
     # Replace the hardcoded result with your actual logic

@@ -10,7 +10,7 @@ def classification(sample):
                     fit_level += sample[trait]
                 else:
                     fit_level += 1 - sample[trait]
-            result[breed] = (fit_level / len(traits)) * 100
+            result[breed] = (fit_level / len(traits)) 
         # result = sorted(result.items(), key=lambda x: x[1], reverse=True)
         return result
 

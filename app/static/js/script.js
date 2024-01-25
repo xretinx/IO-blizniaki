@@ -1,5 +1,9 @@
 let breed;
 document.addEventListener("DOMContentLoaded", function () {
+
+  const buttoncalc = document.getElementById('calc');
+  buttoncalc.disabled = true;
+
   const form = document.getElementById("dog-form");
   const resultDiv = document.getElementById("result");
 
@@ -113,9 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 300);
   });
 
+
+
   const fileInput = document.getElementById("file-input");
   const fileNameLabel = document.getElementById("file-name-label");
   const uploadedImage = document.getElementById("uploaded-image");
+  const buttonFlag = false;
 
   fileInput.addEventListener("change", function () {
     if (fileInput.files.length > 0) {
@@ -128,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
         uploadedImage.style.display = "block";
       };
       reader.readAsDataURL(fileInput.files[0]);
+      buttoncalc.disabled = false;
     } else {
       fileNameLabel.textContent = "No file chosen";
       uploadedImage.style.display = "none";

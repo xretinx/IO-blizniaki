@@ -159,6 +159,14 @@ input[type="file"] {
   background-color: #fab224;
   transition: 0.5s;
 }
+
+.custom-button:disabled,
+custom-button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
 /* Center the image horizontally */
 #uploaded-image {
   max-width: 100%;
