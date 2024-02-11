@@ -1,4 +1,10 @@
-venv
 ResNet50
 uploads
 utils/__pycache__
+venv/
+.vscode
+__pycache__/
+*.py[cod]
+*.pyc
+*~
+*.swp

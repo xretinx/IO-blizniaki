@@ -147,13 +147,30 @@ input[type="file"] {
   padding: 10px 20px; /* Adjust the width as needed */
   border-radius: 5px;
   cursor: pointer;
+  display: block;
+  width: auto; /* Set width to auto to allow text to wrap */
+  text-align: center;
+  align-items: center;
+  margin: 20px auto;
+  font-weight: bold;
+}
+.cuustom-button {
+  background-color: #6043e1;
+  font-family: "Doggie", Courier, monospace;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   display: inline-block;
   width: auto; /* Set width to auto to allow text to wrap */
   text-align: center;
   align-items: center;
-  margin-left: 140px;
   font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .im {
   max-height: 450px;
   display: block;
@@ -162,6 +179,10 @@ input[type="file"] {
 }
 
 .custom-button:hover {
+  background-color: #fab224;
+  transition: 0.5s;
+}
+.cuustom-button:hover {
   background-color: #fab224;
   transition: 0.5s;
 }

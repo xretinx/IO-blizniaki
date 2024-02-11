@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
           '.jpg" alt="Your Image">';
         const reloadButton = document.createElement("button");
         reloadButton.textContent = "Let's try again!";
-        reloadButton.classList.add("cuustom-button");
+        reloadButton.classList.add("custom-button");
         reloadButton.addEventListener("click", function () {
           location.reload();
         });
