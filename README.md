@@ -1,5 +1,5 @@
 # Projekt IO-blizniaki
-The **Your Doggy Twin** app is used to find the most similar breed of dog to a person loaded photo and given personality traits. It uses SoftSets for traits and ResNet50 for image classification.
+The **Your Doggy Twin** app is used to find the most similar breed of dog to a person's loaded photo and given personality traits. It uses SoftSets for traits and ResNet50 for image classification.
 
 ![start](https://github.com/xretinx/IO-blizniaki/assets/79771143/1e745159-fb96-4795-8498-dcccca240ebe)
 
